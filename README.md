@@ -1,40 +1,40 @@
-# 云景CMS文件上传漏洞
+# YJCMS file upload vulnerability
 
-### 1、漏洞背景
+### 1. Vulnerability Background
 
-云景cms是由甘肃云景数字技术有限公司开发的。YJcms（云景cms）是一个基于ThinkPHP5.0.24开发的一套开源PHP企业网站搭建管理系统，Yjcms秉承极简、极速、极致的开发理念，为开发集成了企业 、 旅游 、商城模块，可方便快速扩展的模块、插件。以方便开发者快速构建自己的应用。
+Yunjing cms is developed by gansu yunjing digital technology co., ltd. YJcms (Cloudscape cms) is an open source PHP enterprise website building management system developed based on ThinkPaPHP5.0.24. Yjcms adheres to the concept of minimalist, fast and extreme development, integrates enterprise, tourism and mall modules for development, and is a module and plug-in that can be easily and rapidly expanded. To facilitate developers to quickly build their own applications.
 
-### 2、漏洞利用过程
+### 2. Vulnerability exploitation process
 
-正常网站首页显示如下
+The homepage of the normal website is shown as follows
 
 ```
-https://zjhc-gs.com/
+https://xx.com/
 ```
 
 ![](images/57.jpg)
 
-该cms有注册功能
+This cms has the registration function
 
 ```
-https://zjhc-gs.com/user   
+https://xx.com/user   
 ```
 
-输入user会显示如下并进行跳转到登录和注册页面
+Entering the user path will jump to the login and registration page, as shown below
 
 ![]images/58.jpg)
 
 ![](images/59.jpg)
 
-可以在这儿任意注册并登陆
+You can register and log in here
 
 ![](images/60.jpg)
 
-注册好账号之后登陆后台如下
+After registering the account, log in to the background as follows
 
 ![](images/61.jpg)
 
-在修改头像处存在文件上传漏洞，不过这里做了前端验证，所以先将php文件改为图片格式
+After the account is registered, log in to the background and there is a file upload vulnerability in the modified avatar. However, the front-end verification is done here, so first change the php file to the image format
 
 
 
@@ -42,11 +42,11 @@ https://zjhc-gs.com/user
 
 ![](images/63.jpg)
 
-上传成功显示如下
+The successful upload is shown as follows
 
 ![](images/64.jpg)
 
-点击确定再抓包会返回刚才上传文件的地址
+Click OK to capture the package and return to the address of the uploaded file
 
 ```
 /uploads/user_img/62c3aaf37efed.php
@@ -54,7 +54,7 @@ https://zjhc-gs.com/user
 
 ![](images/65.jpg)
 
-访问该文件
+Accessing this file shows that the PHP file has been uploaded successfully
 
 ![](images/66.jpg)
 
