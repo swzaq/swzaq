@@ -4,6 +4,7 @@
 
 Yunjing cms is developed by gansu yunjing digital technology co., ltd. YJcms (Cloudscape cms) is an open source PHP enterprise website building management system developed based on ThinkPaPHP5.0.24. Yjcms adheres to the concept of minimalist, fast and extreme development, integrates enterprise, tourism and mall modules for development, and is a module and plug-in that can be easily and rapidly expanded. To facilitate developers to quickly build their own applications.
 
+Address of the company's official website：http://www.xjyunjing.com/
 ### 2. Vulnerability exploitation process
 
 The homepage of the normal website is shown as follows
