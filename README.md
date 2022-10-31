@@ -29,7 +29,7 @@ https://xx.com/user
 
 Entering the user path will jump to the login and registration page, as shown below
 
-![]image/58.jpg)
+![](image/58.jpg)
 
 ![](image/59.jpg)
 
